@@ -10,8 +10,11 @@ def main_menu() -> int:
                 ]
     for i in range(len(menu_list)):
         print(f'    {i+1}.{menu_list[i]}')
-    user_input = int(input('Введите команду >: '))
-    return user_input
+    user_input = input('Введите команду >: ')
+    if not user_input.isdigit():
+        print("Вы должны ввести число, попробуйте снова.")
+    else:
+        return int(user_input) 
     
     
 
